@@ -1,27 +1,28 @@
 {
-    "manifest_version": 3,
-    "name": "Mostrar IP",
-    "version": "1.0",
-    "description": "Una extensión para mostrar la dirección IP actual.",
-    "permissions": [
-      "activeTab",
-      "webRequest",
-      "webRequestBlocking",
-      "storage"
-    ],
-    "browser_action": {
-      "default_popup": "popup.html",
-      "default_icon": {
-        "16": "ip.png",
-        "48": "ip.png",
-        "128": "ip.png"
-      }
-    },
-    "icons": {
+  "manifest_version": 3,
+  "name": "Mostrar IP",
+  "version": "1.0",
+  "description": "Una extensión para mostrar la dirección IP actual.",
+  "permissions": [
+    "activeTab",
+    "webRequest",
+    "storage",
+    "declarativeNetRequest"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
       "16": "ip.png",
       "48": "ip.png",
       "128": "ip.png"
-    },
-    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+    }
+  },
+  "icons": {
+    "16": "ip.png",
+    "48": "ip.png",
+    "128": "ip.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
   }
-  
+}
